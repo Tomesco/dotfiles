@@ -9,6 +9,5 @@
 	ui = true
 [core]
 	editor = code -n -w
-	excludesfile = /Users/Thomas/.gitignore
 [merge]
 	conflictstyle = diff3
