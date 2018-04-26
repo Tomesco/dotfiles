@@ -1,0 +1,14 @@
+[user]
+	name = Tomesco
+	email = thomas.antonio@gmail.com
+[credential]
+	helper = osxkeychain
+[push]
+	default = upstream
+[color]
+	ui = true
+[core]
+	editor = code -n -w
+	excludesfile = /Users/Thomas/.gitignore
+[merge]
+	conflictstyle = diff3
