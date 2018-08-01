@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/Thomas/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -71,7 +71,7 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
+#### USER CONFIGURATIONS ####
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -99,23 +99,24 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh
-alias config='/usr/bin/git --git-dir=/Users/Thomas/.cfg/ --work-tree=/Users/Thomas'
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
-# Path modifiations
-source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
+# for gcloud from Homebrew on macOS
+if [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc' ]; then
+  source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
+fi
 
-# Completions
-source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
-# Git from bash
-# source ~/.git-completion.bash
-# bash completions from cellar
-# for file in /usr/local/etc/bash_completion.d/*; do
-#   [ -r "$file" ] && source "$file"
-# done
-# unset file
+# Enable tab completion for gcloud on macOS
+if [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc' ]; then
+  source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
+fi
 
 # Conda
-. /usr/local/anaconda3/etc/profile.d/conda.sh
+# . /usr/local/anaconda3/etc/profile.d/conda.sh
+for file in /usr/local/*conda3/etc/profile.d/conda.sh; do
+  [ -r "$file" ] && source "$file"
+done
+unset file
 # Postgres
 export PGDATA='/usr/local/var/postgres'
 
