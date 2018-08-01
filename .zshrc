@@ -7,7 +7,9 @@ export ZSH=/Users/Thomas/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="refined"
+# ZSH_THEME="robbyrussell"
+# ZSH_THEME="sobole"
+ZSH_THEME="gitster"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -59,10 +61,12 @@ ZSH_THEME="refined"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git
-  brew
-  pip
-  python
+  git # Functions and aliases
+  brew # Aliases
+  safe-paste
+  zsh-autosuggestions
+  zsh-history-substring-search
+  zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -94,4 +98,30 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+# alias ohmyzsh="mate ~/.oh-my-zsh
+alias config='/usr/bin/git --git-dir=/Users/Thomas/.cfg/ --work-tree=/Users/Thomas'
+
+# Path modifiations
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
+
+# Completions
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
+# Git from bash
+# source ~/.git-completion.bash
+# bash completions from cellar
+# for file in /usr/local/etc/bash_completion.d/*; do
+#   [ -r "$file" ] && source "$file"
+# done
+# unset file
+
+# Conda
+. /usr/local/anaconda3/etc/profile.d/conda.sh
+# Postgres
+export PGDATA='/usr/local/var/postgres'
+
+# Completions
+fpath=(~/.zsh $fpath)
+
+HISTFILE=~/.histfile
+HISTSIZE=10000
+SAVEHIST=50000

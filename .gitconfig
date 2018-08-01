@@ -8,6 +8,6 @@
 [color]
 	ui = true
 [core]
-	editor = code -n -w
+	editor = "open /Applications/TextEdit.app/"
 [merge]
 	conflictstyle = diff3

@@ -18,3 +18,6 @@ source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.
 
 . /usr/local/anaconda3/etc/profile.d/conda.sh
 export PGDATA='/usr/local/var/postgres'
+
+# Alias for dotfile management
+alias config='/usr/bin/git --git-dir=/Users/Thomas/.cfg/ --work-tree=/Users/Thomas'
