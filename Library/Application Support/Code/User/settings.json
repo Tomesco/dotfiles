@@ -1,0 +1,34 @@
+{
+    "editor.cursorStyle": "line",
+    "workbench.colorTheme": "Tomorrow Night",
+    "code-runner.executorMap": {
+        "python": "python"
+    },
+
+    // Python specific from https://bespohk.com/blog/configuring-python-visual-studio-code
+    "python.linting.pylintEnabled": true,
+    "python.linting.flake8Enabled": false,
+    "python.formatting.provider": "yapf",
+    "python.unitTest.unittestEnabled": false,
+    "python.unitTest.pyTestEnabled": false,
+    "python.unitTest.nosetestsEnabled": false,
+
+    // Extension and editor preferences
+
+    "files.insertFinalNewline": true,
+    "editor.rulers": [79],
+    "editor.roundedSelection": false,
+    "explorer.openEditors.visible": 0,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.DS_Store": true,
+        ".vscode": true,
+        "**/__pycache__": true,
+        "**/**/*.pyc": true
+    },
+    "explorer.confirmDragAndDrop": false,
+    "editor.minimap.enabled": false,
+    "workbench.startupEditor": "newUntitledFile",
+    "editor.fontFamily": "DejaVuSansMono",
+    "terminal.integrated.fontFamily": "'DejaVu Sans Mono for Powerline'"
+}
