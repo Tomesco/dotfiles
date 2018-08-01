@@ -29,11 +29,10 @@ HISTCONTROL=ignoreboth
 shopt -s histappend
 
 # Conda
-for file in /usr/local/*conda3/etc/profile.d/conda.sh; do
+for file in {/usr/local,$HOME}/*conda3/etc/profile.d/conda.sh; do
   [ -r "$file" ] && source "$file"
 done
 unset file
 
 # Postgres
 export PGDATA='/usr/local/var/postgres'
-

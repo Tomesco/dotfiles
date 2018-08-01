@@ -106,17 +106,14 @@ if [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.i
   source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
 fi
 
-# Enable tab completion for gcloud on macOS
+# Enable tab completion from Homebrew for gcloud on macOS
 if [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc' ]; then
   source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
 fi
 
 # Conda
-# . /usr/local/anaconda3/etc/profile.d/conda.sh
-for file in /usr/local/*conda3/etc/profile.d/conda.sh; do
-  [ -r "$file" ] && source "$file"
-done
-unset file
+source $HOME/miniconda3/etc/profile.d/conda.sh
+
 # Postgres
 export PGDATA='/usr/local/var/postgres'
 
