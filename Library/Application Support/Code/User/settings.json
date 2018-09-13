@@ -29,6 +29,5 @@
     "explorer.confirmDragAndDrop": false,
     "editor.minimap.enabled": false,
     "workbench.startupEditor": "newUntitledFile",
-    "editor.fontFamily": "DejaVuSansMono",
-    "terminal.integrated.fontFamily": "'DejaVu Sans Mono for Powerline'"
+    "editor.fontFamily": "DejaVu Sans Mono"
 }

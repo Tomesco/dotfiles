@@ -1,13 +1,9 @@
 [user]
 	name = Tomesco
 	email = thomas.antonio@gmail.com
-[credential]
-	helper = osxkeychain
 [push]
 	default = upstream
 [color]
 	ui = true
-[core]
-	editor = "open /Applications/TextEdit.app/"
 [merge]
 	conflictstyle = diff3
