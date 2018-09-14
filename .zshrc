@@ -112,7 +112,8 @@ if [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion
 fi
 
 # Conda
-source $HOME/miniconda3/etc/profile.d/conda.sh
+
+source $(brew --prefix)/anaconda3/etc/profile.d/conda.sh
 
 # Postgres
 export PGDATA='/usr/local/var/postgres'
