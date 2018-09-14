@@ -29,5 +29,13 @@
     "explorer.confirmDragAndDrop": false,
     "editor.minimap.enabled": false,
     "workbench.startupEditor": "newUntitledFile",
-    "editor.fontFamily": "DejaVu Sans Mono"
+    "editor.fontFamily": "DejaVuSansMono",
+    "terminal.integrated.fontFamily": "'DejaVu Sans Mono for Powerline'",
+    "sync.gist": "7bc4f128bd2d7373f9d9bfdeff954c01",
+    "sync.quietSync": false,
+    "sync.removeExtensions": true,
+    "sync.syncExtensions": true,
+    "sync.autoDownload": false,
+    "sync.autoUpload": false,
+    "sync.forceDownload": false
 }
