@@ -1,5 +1,5 @@
 [user]
-	name = Tomesco
+	name = Thomas Antonio
 	email = thomas.antonio@gmail.com
 [push]
 	default = upstream
@@ -7,3 +7,9 @@
 	ui = true
 [merge]
 	conflictstyle = diff3
+[github]
+	user = Tomesco
+[credential]
+	helper = osxkeychain
+[core]
+	editor = nano
