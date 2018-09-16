@@ -13,3 +13,4 @@
 	helper = osxkeychain
 [core]
 	editor = nano
+	excludesfile = /Users/thomas/.gitignore_global
