@@ -113,7 +113,8 @@ fi
 
 # Conda
 
-source $(brew --prefix)/anaconda3/etc/profile.d/conda.sh
+# source $(brew --prefix)/anaconda3/etc/profile.d/conda.sh
+source /anaconda3/etc/profile.d/conda.sh
 
 # Postgres
 export PGDATA='/usr/local/var/postgres'
@@ -127,3 +128,7 @@ SAVEHIST=50000
 
 # Change man to use less for linux
 export MANPAGER=less
+
+# Setup NVM
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
