@@ -99,22 +99,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-
-# for gcloud from Homebrew on macOS
-if [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc' ]; then
-  source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
-fi
-
-# Enable tab completion from Homebrew for gcloud on macOS
-if [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc' ]; then
-  source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
-fi
-
-# Conda
-
-# source $(brew --prefix)/anaconda3/etc/profile.d/conda.sh
-source /anaconda3/etc/profile.d/conda.sh
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # Postgres
 export PGDATA='/usr/local/var/postgres'
@@ -129,6 +114,8 @@ SAVEHIST=50000
 # Change man to use less for linux
 export MANPAGER=less
 
-# Setup NVM
-export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
+alias python='python3'
+alias pip='pip3'
+export PATH="/Users/${USER}/.pyenv:$PATH"
+eval "$(pyenv init -)"
+export PATH="/usr/local/sbin:$PATH"
