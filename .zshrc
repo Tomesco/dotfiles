@@ -106,13 +106,17 @@ export PGDATA='/usr/local/var/postgres'
 
 # Completions
 fpath=(~/.zsh $fpath)
-
 HISTFILE=~/.histfile
 HISTSIZE=10000
 SAVEHIST=50000
 
 # Change man to use less for linux
 export MANPAGER=less
+
+# Colors in ls
+unset LSCOLORS
+export CLICOLOR=1
+export CLICOLOR_FORCE=1
 
 alias python='python3'
 alias pip='pip3'
