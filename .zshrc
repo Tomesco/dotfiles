@@ -65,7 +65,6 @@ plugins=(
   brew # Aliases
   safe-paste
   zsh-autosuggestions
-  zsh-history-substring-search
   zsh-syntax-highlighting
 )
 
@@ -123,3 +122,6 @@ alias pip='pip3'
 export PATH="/Users/${USER}/.pyenv:$PATH"
 eval "$(pyenv init -)"
 export PATH="/usr/local/sbin:$PATH"
+
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
+source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
