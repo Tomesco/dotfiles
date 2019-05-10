@@ -68,6 +68,11 @@ plugins=(
   zsh-syntax-highlighting
 )
 
+# Added for Brew installed completions
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+fi
+
 source $ZSH/oh-my-zsh.sh
 
 #### USER CONFIGURATIONS ####
@@ -104,7 +109,6 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 export PGDATA='/usr/local/var/postgres'
 
 # Completions
-fpath=(~/.zsh $fpath)
 HISTFILE=~/.histfile
 HISTSIZE=10000
 SAVEHIST=50000
@@ -117,12 +121,21 @@ unset LSCOLORS
 export CLICOLOR=1
 export CLICOLOR_FORCE=1
 
+# For Ada environment
 alias python='python3'
 alias pip='pip3'
-export PATH="/Users/${USER}/.pyenv:$PATH"
 eval "$(pyenv init -)"
+
+# Recommended by brew doctor
 export PATH="/usr/local/sbin:$PATH"
 
 source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
 source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
+
+# For https://github.com/Neilpang/acme.sh
 . "/Users/thomasantonio/.acme.sh/acme.sh.env"
+
+# Alias hub to git
+eval "$(hub alias -s)"
+
+alias knt='kontemplate'
