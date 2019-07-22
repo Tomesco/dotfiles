@@ -132,10 +132,12 @@ export PATH="/usr/local/sbin:$PATH"
 source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
 source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
 
-# For https://github.com/Neilpang/acme.sh
-. "/Users/thomasantonio/.acme.sh/acme.sh.env"
-
 # Alias hub to git
 eval "$(hub alias -s)"
 
 alias knt='kontemplate'
+alias c.="code -n ."
+alias kyam="kubectl apply --dry-run -o yaml -k"
+
+# For Go
+export PATH=$PATH:/Users/thomasantonio/go/bin
