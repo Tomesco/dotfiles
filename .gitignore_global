@@ -38,3 +38,5 @@ node_modules
 .sass-cache
 .vscode/
 private.key
+
+.python-version
