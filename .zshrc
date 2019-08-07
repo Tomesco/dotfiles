@@ -138,6 +138,7 @@ eval "$(hub alias -s)"
 alias knt='kontemplate'
 alias c.="code -n ."
 alias kyam="kubectl apply --dry-run -o yaml -k"
+alias k="kubectl"
 
 # For Go
 export PATH=$PATH:/Users/thomasantonio/go/bin
