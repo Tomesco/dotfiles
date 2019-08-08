@@ -69,6 +69,11 @@ plugins=(
   zsh-syntax-highlighting
 )
 
+# Added for Brew installed completions
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+fi
+
 source $ZSH/oh-my-zsh.sh
 
 #### USER CONFIGURATIONS ####
@@ -99,7 +104,50 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+# Postgres
+export PGDATA='/usr/local/var/postgres'
+
+# History
+HISTFILE=~/.histfile
+HISTSIZE=10000
+SAVEHIST=50000
+
+# Colors in ls
+unset LSCOLORS
+export CLICOLOR=1
+export CLICOLOR_FORCE=1
+
+# For Ada environment
+alias python='python3'
+alias pip='pip3'
+eval "$(pyenv init -)"
+
+# Recommended by brew doctor
+export PATH="/usr/local/sbin:$PATH"
+
+# Alias hub to git
+eval "$(hub alias -s)"
+
+alias knt='kontemplate'
+alias c.="code -n ."
+alias kyam="kubectl apply --dry-run -o yaml -k"
+alias k="kubectl"
+
+# For Go
+export PATH=$PATH:/Users/thomasantonio/go/bin
+
+# Conda
+# source $(brew --prefix)/anaconda3/etc/profile.d/conda.sh
+source /anaconda3/etc/profile.d/conda.sh
+
+# Completions
+fpath=(~/.zsh $fpath)
+
+# Setup NVM
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
 
 # for gcloud from Homebrew on macOS
 if [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc' ]; then
@@ -110,25 +158,3 @@ fi
 if [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc' ]; then
   source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
 fi
-
-# Conda
-
-# source $(brew --prefix)/anaconda3/etc/profile.d/conda.sh
-source /anaconda3/etc/profile.d/conda.sh
-
-# Postgres
-export PGDATA='/usr/local/var/postgres'
-
-# Completions
-fpath=(~/.zsh $fpath)
-
-HISTFILE=~/.histfile
-HISTSIZE=10000
-SAVEHIST=50000
-
-# Change man to use less for linux
-export MANPAGER=less
-
-# Setup NVM
-export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
