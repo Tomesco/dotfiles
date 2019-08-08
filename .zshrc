@@ -158,3 +158,6 @@ fi
 if [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc' ]; then
   source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc'
 fi
+
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+fpath=(/usr/local/share/zsh-completions $fpath)
