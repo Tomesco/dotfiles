@@ -32,10 +32,12 @@ Temporary Items
 *.out
 
 # Application specific files
-venv
+venv/
+env/
 node_modules
 .sass-cache
 .vscode/
 .python-version
-
+cloud_sql_proxy
 private.key
+notes.txt

@@ -1,6 +1,7 @@
 [user]
 	name = Thomas Antonio
 	email = thomas.antonio@gmail.com
+	signingKey = 991245FCBEAE5B9F
 [push]
 	default = upstream
 [color]
