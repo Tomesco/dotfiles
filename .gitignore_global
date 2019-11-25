@@ -41,3 +41,4 @@ node_modules
 cloud_sql_proxy
 private.key
 notes.txt
+.terraform
