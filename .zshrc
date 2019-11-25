@@ -66,6 +66,7 @@ plugins=(
   safe-paste
   zsh-autosuggestions
   zsh-syntax-highlighting
+  kubectl
 )
 
 # Added for Brew installed completions
@@ -139,6 +140,7 @@ alias knt='kontemplate'
 alias c.="code -n ."
 alias kyam="kubectl apply --dry-run -o yaml -k"
 alias k="kubectl"
+alias tf="terraform"
 
 # For Go
 export PATH=$PATH:/Users/thomasantonio/go/bin
