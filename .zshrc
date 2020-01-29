@@ -144,3 +144,9 @@ alias tf="terraform"
 
 # For Go
 export PATH=$PATH:/Users/thomasantonio/go/bin
+
+. /usr/local/opt/asdf/asdf.sh
+
+# To use gpg-agent for ssh
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+gpgconf --launch gpg-agent

@@ -38,5 +38,7 @@ node_modules
 .sass-cache
 .vscode/
 private.key
+.terraform
 
 .python-version
+notes.txt
